@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./layout.module.css";
 const Layout = (props) => {
-  console.log("props", props.urlBg);
   return (
     <section
       className={s.root}
