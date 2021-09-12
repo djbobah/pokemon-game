@@ -6,7 +6,6 @@ import Layout from "./components/layout";
 import Footer from "./components/footer";
 import PocemonCard from "./components/pocemonCard";
 import bg1 from "./assets/bg1.jpg";
-import bg2 from "./assets/bg2.jpg";
 
 const POCEMONS = [
   {
@@ -137,11 +136,17 @@ function App() {
       <Layout title="Cardes" descr="descr2" colorBg="#e2e2e2">
         <div className="flex">
           {POCEMONS.map((item) => (
-            <PocemonCard key={item.id} {...item} />
+            <PocemonCard
+              key={item.id}
+              type={item.type}
+              img={item.img}
+              name={item.name}
+              values={item.values}
+            />
           ))}
         </div>
       </Layout>
-      <Layout title="Title3" descr="descr3" urlBg={bg2}>
+      <Layout title="Title3" descr="descr3" urlBg={bg1}>
         <div className="flex">
           <p>
             In the game two players face off against one another, one side

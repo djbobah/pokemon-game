@@ -5,7 +5,7 @@ import cardBack from "../assets/card-back-side.jpg";
 const PocemonCard = ({ name, img, id, type, values }) => {
   const [isActive, setActive] = useState(false);
   const handlerClick = () => {
-    setActive(true);
+    isActive ? setActive(false) : setActive(true);
   };
   return (
     <>
